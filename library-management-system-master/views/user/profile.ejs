@@ -1,0 +1,42 @@
+<%- include("../partials/header") -%>
+<%- include("usernav") -%>
+<div class="profile-page">
+   <div class="profile">
+       <div>
+           <img src="https://cdn.statically.io/img/fancyodds.com/wp-content/uploads/2020/05/rohit-sharma-biography-1.jpg" alt="">
+       </div>
+       <div>
+           <button class="editprofile">Change Profile Photo</button>
+       </div>
+       <div class="info">
+           <div class="infodetail">
+               <h5>Name</h5>
+               <p> <%= profiledata.firstName.toUpperCase()+" "+profiledata.lastName.toUpperCase() %></p>
+           </div>
+           <div class="infodetail">
+               <h5>Post</h5>
+               <p><%= profiledata.post.toUpperCase() %></p>
+           </div>
+           <div class="infodetail">
+               <h5>Email Address</h5>
+               <p> <%= profiledata.email %></p>
+           </div>
+           <div class="infodetail">
+               <h5>Mobile number</h5>
+               <p><%= profiledata.mobile %></p>
+           </div>
+        <div class="infodetail">
+           <h5>Address</h5>
+           <address>
+               <h5><%= profiledata.address %></h5>
+           </address>
+        </div>
+       <div class="infodetail">
+           <h5>Joined Data</h5>
+           <p><%= profiledata.joined.toLocaleDateString() %> </p>
+       </div>
+       </div>
+</div>
+</div>
+
+<%- include("../partials/footer") -%>

@@ -1,0 +1,22 @@
+<%- include("../partials/header") -%>
+<%- include("navbar") -%>
+<div class="updatebookdata">
+  <div class="book-header">
+    <h2>Update Book Details</h2>
+   </div>
+  <%  bookdata.forEach(singlebook => { %>
+    <form action="/updatebook/<%= singlebook._id %>" class="update-data" method="post">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" value=<%=singlebook.title %>>
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author" value=<%=singlebook.author %>>
+        <label for="category">Caregory</label>
+        <input type="text" name="category" id="category" value=<%=singlebook.category %>>
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="20" rows="10" placeholder="<%=singlebook.description %>"></textarea>
+        <button class="addbutton" type="submit">Update Book</button>
+    </form>
+    <% }) %>
+   
+</div>
+<%- include("../partials/footer") -%>

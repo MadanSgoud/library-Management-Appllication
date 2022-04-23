@@ -1,0 +1,16 @@
+<%- include("../partials/header") -%>
+<div class="adminlogin-form">
+        <div class="user-header">
+            <h2>Admin Login</h2>
+        </div>
+        <form action="/adminlogin" class="admin-login" method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <button class="adminlogin" type="submit">Log In</button>
+        </form>
+        <p>Dont't Have An Account ? <a href="/adminregistration">Register Here</a></p>
+</div>
+
+<%- include("../partials/footer") -%>

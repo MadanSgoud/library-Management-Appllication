@@ -1,0 +1,18 @@
+<%- include("../partials/header") -%>
+<%- include("navbar") -%>
+<div class="librarian-heading">
+   <h1>Librarian Details</h1> 
+</div>
+ <div class="librarians-details">
+    <% details.forEach(detail => {  %>
+         <div class="librarian-details">
+             <p> <%= detail.username %></p>
+             <p> <%= detail.email %></p>
+             <p> <%= detail.mobile %></p>
+            <p><a href="/deletelibrarian/<%= detail._id %>">Delete Account</a></p> 
+         </div>
+   <%  })  %>
+ </div>
+<%- include("../partials/footer") -%>
+
+

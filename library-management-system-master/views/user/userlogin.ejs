@@ -1,0 +1,16 @@
+<%- include("../partials/header") -%>
+<div class="login-form">
+    <div class="user-header">
+        <h2>User Login</h2>
+    </div>
+    <form action="/userlogin" method="post" class="user-login">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <button type="submit" class="userlogin">Login</button>
+    </form>
+    <p>Don't Have An Account ? <a href="/userregistration">Register Here</a></p>
+</div>
+
+<%- include("../partials/footer") -%>

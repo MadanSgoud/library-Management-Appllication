@@ -1,0 +1,12 @@
+<%- include("../partials/header") -%>
+<%- include("header") -%>
+<div class="display-book">
+        <div class="bookdata">
+            <h3 class="title"><%= book.title %></h3>
+            <h4>By <%= book.author %></h4>
+            <h4> <%= book.category %></h4>
+            <h4> Stock Avilable:<%= book.stock %></h4>
+            <p><%= book.description %></p>
+        </div>
+</div>
+<%- include("../partials/footer") -%>

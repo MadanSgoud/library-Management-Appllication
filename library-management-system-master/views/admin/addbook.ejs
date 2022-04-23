@@ -1,0 +1,35 @@
+<%- include("../partials/header") -%>
+<%- include("navbar") -%>
+<% if(message.length>0){  %>
+    <div class="alert-message" id="alert-message">
+        <p><%= message %></p>
+        <p id="close-button">X</p>
+    </div>
+<% }  %>
+<div class="add-book">
+    <div class="book-header">
+        <h2>Enter Book Details</h2>
+    </div>
+<form action="/addbook" method="post" class="book-add">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title">
+    <label for="author">Author</label>
+    <input type="text" name="author" id="author">
+    <label for="category">Caregory</label>
+    <input type="text" name="category" id="category">
+    <label for="copies">Copies</label>
+    <input type="number" name="copies" id="copies">
+    <label for="description">Description</label>
+    <textarea name="description" id="description" cols="30" rows="10"> 
+    </textarea>
+    <button class="addbutton" id="addbutton" type="submit">Add Book</button>
+</form>
+</div>
+ <script>
+const closebutton=document.getElementById("close-button");
+const alertmessage=document.getElementById("alert-message");
+ closebutton.addEventListener("click",() => {
+   alertmessage.classList.add("remove-alert");
+ })
+ </script>
+<%- include("../partials/footer") -%>

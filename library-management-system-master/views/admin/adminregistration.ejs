@@ -1,0 +1,33 @@
+<%- include("../partials/header") -%>
+<%- include("navbar") -%>
+<div class="registration-form">
+      <div class="adminheader">
+          <h2>Register Here</h2>
+      </div>
+    <form action="/adminregister" method="post" class="admin-register" autocomplete="off">
+        <input type="text" name="firstname" id="firstname" placeholder="First Name">
+        <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+        <input type="text" name="username" id="username" placeholder="User Name">
+        <input type="email" name="email" id="email" placeholder="Email Address">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <select name="gender">
+            <option value="" disabled selected hidden>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="famale">Female</option>
+        </select>
+        <select name="post" id="post">
+            <option value="" disabled selected hidden>Select Post</option>
+            <option value="admin">Admin</option>
+            <option value="librarian">Librarian</option>
+            
+        </select>
+        <input type="tel" name="mobile" id="mobile" placeholder="Mobile" autocomplete="off">
+        <textarea name="address" id="address" cols="10" rows="10" placeholder="Address"></textarea>
+        <button class="submit" type="submit">Register</button>
+        <p>Have Already An Account ? <a href="/adminlogin">Login Here</a></p>
+    </form>
+    
+</div>
+<%- include("../partials/footer") -%>
+
+

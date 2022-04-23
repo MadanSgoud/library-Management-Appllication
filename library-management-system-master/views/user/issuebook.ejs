@@ -1,0 +1,21 @@
+<%- include("../partials/header") -%>
+<%- include('usernav') -%>
+<div class="books-data">
+    <% booksdata.forEach(bookdata => { %>
+         <div class="book-data">
+             <h3><%= bookdata.title %></h3>
+             <h4>By <%= bookdata.author %></h4>
+             <h4> Stock Avilable:<%= bookdata.stock %></h4>
+            <% if(bookdata.stock>0){ %>
+             <p>  <a href="/issuebook/<%= bookdata._id %>">Issue Book</a>  </p>
+           <%  }else{ %>
+                 <p>Stock not Avilable</p>
+           <% }  %>
+
+            
+         </div>
+     <% })  %>
+ </div>
+<%- include("../partials/footer") -%>
+
+

@@ -1,0 +1,15 @@
+<%- include("../partials/header") -%>
+<%- include("header") -%>
+<%- include("searchbook") -%>
+<div class="books-data">
+   <% booksdata.forEach(bookdata => { %>
+        <div class="book-data">
+            <h3><%= bookdata.title %></h3>
+            <h4>By <%= bookdata.author %></h4>
+            <h4> Stock Avilable:<%= bookdata.stock %></h4>
+            <p><%= bookdata.description.substring(1,150) %> <a href="/displaybook/<%= bookdata._id %>">See More</a> </p>
+        </div>
+    <% })  %>
+</div>
+    
+<%- include("../partials/footer") -%>

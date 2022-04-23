@@ -1,0 +1,27 @@
+<%- include("../partials/header") -%>
+<%- include("navbar") -%>
+<% if(updatemessage.length>0){  %>
+  <div class="alert-message" id="alert-message">
+      <p><%= updatemessage %></p>
+      <p id="close-button">X</p>
+  </div>
+  <% } %>
+<div class="deletebooks">
+  <%  bookdata.forEach(singlebook => { %>
+     <div class="deletesinglebook">
+       <h3>Title : <%= singlebook.title %></h3>
+       <h4>Author :<%= singlebook.author %></h4>
+       <h4>Category :<%= singlebook.category %></h4>
+       <h2>Stock : <%= singlebook.stock%></h2>
+       <a href="/updatebook/<%= singlebook._id %>">update</a>
+     </div>
+    <% }) %>
+</div>
+<script>
+  const closebutton=document.getElementById("close-button");
+  const alertmessage=document.getElementById("alert-message");
+   closebutton.addEventListener("click",() => {
+     alertmessage.classList.add("remove-alert");
+   })
+   </script>
+<%- include("../partials/footer") -%>

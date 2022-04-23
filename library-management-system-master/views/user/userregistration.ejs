@@ -1,0 +1,33 @@
+<%- include("../partials/header") -%>
+<div class="registration-form">
+    <div class="userheader">
+        <h2>User Registration</h2>
+    </div>
+    <form action="/userregister" method="post" class="user-register" autocomplete="off">
+        <input type="text" name="firstname" placeholder="First Name">
+        <input type="text" name="lastname" placeholder="Last Name">
+        <input type="text" name="username" placeholder="Username">
+        <input type="email" name="email" placeholder="Email Address">
+        <input type="password" name="password" placeholder="Password">
+        <select name="gender" id="gender">
+            <option value="" disabled selected hidden>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="famale">Female</option>
+        </select>
+        <select name="branch" id="branch">
+            <option value="" disabled selected hidden>Select Branch</option>
+            <option value="it">IT</option>
+            <option value="cse">CSE</option>
+            <option value="civil">Civil</option>
+            <option value="Mechanical">Mechanical</option>
+        </select>
+        <input type="tel" name="mobile" placeholder="mobile">
+        <textarea name="address" id="address" cols="10" rows="10" placeholder="Address"></textarea>
+        <button type="submit" class="submit">Register</button>
+        <p>Have Already An Account ? <a href="/adminlogin">Login Here</a></p>
+    </form>
+    
+</div>
+<%- include("../partials/footer") -%>
+
+

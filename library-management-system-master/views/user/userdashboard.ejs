@@ -1,0 +1,48 @@
+<%- include("../partials/header") -%>
+<%- include('usernav') -%>
+<div class="user-dashboard">
+    <div class="user-activities">
+        <a href="/issuebook">Issue Book</a>
+        <a href="/returnbook">Return Book</a>
+        <a href="/profileuser/<%=userdata._id %>">Profile</a>
+    </div>
+    <div class="user-data">
+        <div class="user-profile">
+            <div class="user-image">
+                <img src="https://cdn.statically.io/img/fancyodds.com/wp-content/uploads/2020/05/rohit-sharma-biography-1.jpg" alt="">
+                <h5><%= userdata.firstName.toUpperCase()+" "+userdata.lastName.toUpperCase() %></h5>
+                <h5>Branch :<%= userdata.branch.toUpperCase() %></h5>
+                <h5>Fine : <%= userdata.fines %></h5>
+                <h5>Books issued : <%= userdata.bookIssueInfo.length %></h5>
+            </div>
+            <div class="user-recent">
+                <div class="useractivity-header">
+                    <h2>Recent Actvities</h2>
+                </div>
+                <div class="useractivity-type userhead">
+                    <div>
+                        Books Issued
+                    </div>
+                    <div>
+                        Date
+                    </div>
+                </div>
+               <% booksdata.forEach(bookdata => { %>
+                    <div class="useractivity-type userdata">
+                        <div>
+                            <%= bookdata.book_info.title %>
+                        </div>
+                        <div>
+                            <p> <span>Issue Date : <%= bookdata.book_info.issueDate.toLocaleDateString() %></span> 
+                            <span>Return Date : <%= bookdata.book_info.returnDate.toLocaleDateString() %></span>
+                            </p>
+                        </div>
+                      </div>
+              <%  })    %>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer") -%>
+
+

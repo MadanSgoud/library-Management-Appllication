@@ -1,0 +1,16 @@
+<%- include("../partials/header") -%>
+<%- include('usernav') -%>
+<div class="books-data">
+    <% booksdata.forEach(bookdata => { %>
+         <div class="book-data">
+             <h3><%= bookdata.book_info.title %></h3>
+             <h3><%= bookdata.book_info.author %></h3>
+             <h3>Return Date <%= bookdata.book_info.returnDate.toLocaleDateString() %></h3>
+            <a href="/returnbook/<%= bookdata.book_info.id %>">Return Book</a>
+            <p><%= bookdata.book_info._id %></p>
+         </div>
+     <% })  %>
+ </div>
+<%- include("../partials/footer") -%>
+
+

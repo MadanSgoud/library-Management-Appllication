@@ -1,0 +1,65 @@
+<%- include("../partials/header") -%>
+<div class="dahboard">
+    <div class="dashboard-header">
+        <div>
+            <h2>Dashboard</h2>
+        </div>
+     <div class="logoutbar">
+    <p>Welcome <span class="username"> <%= ""+admindata.username %></span>    </p>  
+     <p><a href="/logout">Logout</a></p>
+     <p><a href="/profile/<%= admindata._id %>
+        ">Profile</a></p>
+     </div>
+    </div>
+    <div class="profile-activities">
+        <div class="adminactivities">
+            <a href="/addbook">Add Book</a>
+            <a href="/deletebook">Delete Book</a>
+            <a href="/updatebook">Update Book</a>
+            <a href="/searchbooks">Search Books</a>
+           <% if(admindata.post==="admin") {   %>
+            <a href="/adminregistration">Add Librarian</a>
+            <a href="/librariandetails">Delete Librarian</a>
+            <a href="/userdetails">Users Information</a>
+          <%  }   %>
+        </div>
+        <div class="admin-data">
+            <div class="recent-activities">
+                <div class="activity-header">
+                    <h2>Recent Actvities</h2>
+                </div>
+                <div class="activity-type head">
+                    <div>
+                        User Name
+                    </div>
+                    <div>
+                        Book Name
+                    </div>
+                    <div>
+                        Date
+                    </div>
+                </div>
+                <% issuedata.forEach(issue => {  %>
+                    <div class="activity-type data">
+                        <div>
+                           <%= issue.user_id.username %>
+                        </div>
+                        <div>
+                            <%= issue.book_info.title %>
+                        </div>
+                        <div>
+                            <p> <span> Issue Date :  <%= issue.book_info.issueDate.toLocaleDateString() %> </span>
+                            <span> Return Date :  <%= issue.book_info.returnDate.toLocaleDateString() %> </span>
+                            </p>
+                        </div>
+                      </div>
+              <%  }) %>
+            </div>
+        </div>
+    </div>
+    
+    
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer") -%>

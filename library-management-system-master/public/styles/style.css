@@ -1,0 +1,549 @@
+* {
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+@import url("../node_modules/font-awesome/css/font-awesome.min.css");
+
+.fas {
+  font-size: 24px;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+/*usernam */
+.username {
+  color: blue;
+  font-size: 20px;
+}
+/* home page styles */
+.home {
+  background: linear-gradient(180deg, #88e0ef, #8fc9d3, #20c5e2, #88e0ef);
+  height: 100vh;
+}
+.header {
+  padding: 35px 0;
+  letter-spacing: 5px;
+  text-align: center;
+  color: antiquewhite;
+  color: #09009b;
+  font-size: 25px;
+}
+.login-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #5099a7;
+  width: 40%;
+  margin: 100px 30%;
+  border-radius: 10px;
+}
+.login-links a {
+  text-decoration: none;
+  width: 100%;
+  font-size: 25px;
+  color: azure;
+  text-align: center;
+  display: inline-block;
+  padding: 20px 0;
+  letter-spacing: 2px;
+}
+.home-link {
+  width: 100%;
+}
+.home-link li:hover {
+  background-color: #000d6b;
+}
+/* admin registration page */
+.registration-form {
+  background-color: rgb(200, 200, 200);
+  width: 50%;
+  margin: 5% 25%;
+}
+.adminheader h2 {
+  padding-top: 20px;
+  text-align: center;
+}
+.admin-register {
+  text-align: center;
+  padding: 20px 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"] {
+  width: 90%;
+  padding: 10px 15px;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+textarea {
+  width: 90%;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select :focus {
+  outline: none;
+  border: none;
+}
+select {
+  width: 45%;
+  padding: 10px 10px;
+  border: none;
+  margin-bottom: 5px;
+}
+.submit {
+  width: 90%;
+  padding: 8px;
+  border: none;
+  background-color: aquamarine;
+  margin: 10px 0;
+  text-align: center;
+}
+/* admin login page */
+.adminlogin-form {
+  background-color: rgb(200, 200, 200);
+  width: 50%;
+  margin: 5% 25%;
+}
+.adminlogin-form p {
+  text-align: center;
+  padding-bottom: 25px;
+}
+.user-header {
+  padding: 5px 0;
+  text-align: center;
+  background-color: aquamarine;
+}
+.admin-login {
+  margin: 0 auto;
+  margin: 0 5%;
+}
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+.adminlogin {
+  margin: 20px 0;
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px 25px;
+  border: none;
+  background-color: aqua;
+}
+/* user login page */
+.login-form {
+  background-color: rgb(200, 200, 200);
+  width: 50%;
+  margin: 5% 25%;
+}
+.user-login {
+  margin: 0 5%;
+}
+.login-form p {
+  text-align: center;
+  padding-bottom: 25px;
+}
+.userlogin {
+  margin: 20px 0;
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px 25px;
+  border: none;
+  background-color: aqua;
+}
+/* user Registration Page */
+.user-register {
+  text-align: center;
+  padding: 20px 5px;
+}
+.userheader {
+  padding: 5px;
+  text-align: center;
+  background-color: aquamarine;
+}
+/* admin dashboard */
+.dashboard-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 30px 5px 40px;
+  background-color: rgb(200, 200, 200);
+}
+.logoutbar {
+  display: flex;
+  flex-direction: row;
+}
+.logoutbar p {
+  padding: 0 10px;
+}
+.profile-activities {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+.adminactivities {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  background-color: aquamarine;
+  height: 90vh;
+}
+.adminactivities a {
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 10px;
+  color: black;
+  font-size: 20px;
+}
+.adminactivities a:hover {
+  background-color: rgb(13, 165, 114);
+  border-radius: 10px;
+}
+.admin-data {
+  display: flex;
+  flex-direction: column;
+}
+.admin-profile {
+  margin: 30px 10px 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px 20px;
+  justify-content: space-between;
+  width: 60%;
+  font-weight: bold;
+  border: 2px solid rgb(245, 244, 244);
+}
+.admin-info {
+  text-align: center;
+}
+.admin-profile img {
+  max-width: 100%;
+}
+.recent-activities {
+  padding: 0 20px 20px;
+}
+.activity-header {
+  text-align: center;
+}
+.activity-type {
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+}
+.head {
+  background-color: aquamarine;
+  padding: 10px 20px;
+}
+.data {
+  background-color: aliceblue;
+  padding: 10px;
+}
+/* nav bar */
+.nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 50px;
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+}
+.nav a {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 25px;
+}
+.nav a:last-child {
+  position: fixed;
+  right: 30px;
+}
+/* add book  */
+.add-book {
+  background-color: rgb(200, 200, 200);
+  padding: 20px 10px;
+  width: 50%;
+  margin: 2% 25%;
+}
+.book-add {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+}
+textarea {
+  width: 90%;
+  outline: none;
+  border: none;
+}
+.addbutton {
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+  background-color: aquamarine;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+}
+.book-header {
+  padding: 5px;
+  text-align: center;
+  background-color: bisque;
+}
+/* delete books */
+.deletebooks {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px 20px;
+  margin: 30px 2%;
+}
+.deletesinglebook {
+  color: white;
+  background-color: #99a799;
+  padding: 12px 15px;
+  height: 250px;
+}
+.deletesinglebook a {
+  background-color: black;
+  color: white;
+  padding: 6px 15px;
+}
+/* updata book data */
+.updatebookdata {
+  background-color: rgb(200, 200, 200);
+  padding: 20px 10px;
+  width: 50%;
+  margin: 1% 25%;
+}
+.update-data {
+  display: flex;
+  flex-direction: column;
+}
+/* search books data */
+.books-data {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px 20px;
+  margin: 20px 2%;
+}
+.book-data {
+  color: white;
+  background-color: #99a799;
+  padding: 12px 15px;
+  height: 250px;
+  text-align: justify;
+}
+.search-book {
+  margin-top: 20px;
+  padding: 20px 10px;
+  background-color: black;
+  text-align: center;
+}
+.search-book input[type="text"],
+select {
+  width: 40%;
+  padding: 10px;
+  border-radius: 0;
+  border: none;
+}
+.search-book button {
+  width: 12%;
+  padding: 10px;
+  border: none;
+}
+.search-book button:hover {
+  background-color: #20c5e2;
+}
+/* book data */
+.display-book {
+  padding: 10px 20px;
+  margin: 100px 20%;
+  text-align: justify;
+  color: white;
+  background-color: black;
+}
+.title {
+  font-weight: bold;
+  font-size: 20px;
+}
+/* Admin Profile */
+.profile-page {
+  background-color: black;
+}
+.profile {
+  margin: 0 25% 0;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(27, 27, 27);
+  color: white;
+}
+.profile img {
+  width: 300px;
+  height: 250px;
+  border-radius: 100%;
+}
+.editprofile {
+  border: none;
+  padding: 10px 15px;
+  margin: 10px 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+}
+.info {
+  text-align: justify;
+  padding-bottom: 25px;
+}
+.info p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+.info h5 {
+  font-family: "Arima Madurai", cursive;
+  font-size: 20px;
+  margin: 0;
+}
+.infodetail {
+  margin: 5px;
+  padding-left: 20px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+/* Librarian Details */
+.librarians-details {
+  margin: 20px 10px 10px;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  justify-content: center;
+  grid-gap: 10px;
+}
+.librarian-details {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-family: "Arima Madurai", cursive;
+  justify-content: space-between;
+}
+.librarian-details p {
+  padding: 0 5px;
+}
+.librarian-heading {
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: 4px;
+  font-size: 20px;
+  text-shadow: 0px 3px 2px #ccc, 0px 8px 10px rgba(0, 0, 0, 0.15),
+    0px 12px 2px rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+  text-align: center;
+}
+.alert-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  padding: 5px 20px 5px 25px;
+  width: 50%;
+  margin: 20px 25% 0;
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+#close-button {
+  cursor: pointer;
+}
+.remove-alert {
+  display: none;
+}
+/* User dashboard */
+.user-activities {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 10%;
+}
+.user-activities a {
+  width: 10%;
+  display: inline-block;
+  background-color: black;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+.useractivity-header {
+  text-align: center;
+}
+.user-profile {
+  display: grid;
+  grid-template-columns: 35% 60%;
+  margin: 25px 5%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+.user-image {
+  text-align: center;
+}
+.user-image img {
+  width: 300px;
+  height: 250px;
+  border-radius: 100%;
+}
+.useractivity-type {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+}
+.userhead {
+  background-color: black;
+}
+.userdata {
+  background-color: rgb(10, 10, 10);
+}
+/* user profile */
+.issued-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 120px;
+  align-items: center;
+}
